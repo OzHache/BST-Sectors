@@ -34,31 +34,25 @@ public class SectorBST
         if(point.z > m_center.z){
             sorter += posZ;
         }
-        switch (sorter){
+        switch ((Int)sorter){
             case 0:     //-x, -y, -z
                 return g;
-                break;
             case 2:     //+x, -y, -z
                 return h;
-                break;
             case 4:     //-x, +y, -z
                 return c;
-                break;
             case 6:     //+x, +y, -z
                 return d;
-                break;
             case 8:     //-x, -y, +z
                 return e;
-                break;
             case 10:    //+x, -y, +z
                 return f;
-                break;
             case 12:    //-x, +y, +z
                 return a;
-                break;
             case 14:    //+x, +y, +z
                 return b;
-                break;
+            case default:
+                return g;
         }
     }
 
