@@ -1,3 +1,4 @@
+
 public class SectorBST
 {
     Vector3 m_center;
@@ -14,7 +15,9 @@ public class SectorBST
 
     Add(Vector3 point){
         var subSector = GetSubSector(point);
-        subSector.Add(point)
+        subSector.Add(point) //obviously you cannot add to an array in C# so you can use a list
+                            // then make an array of that list's size, this would even give you the
+                            //opportunity to sort by distance. 
     }
     private Vector3 GetSubSector(Vector3 point){
         byte posX = (byte)2;
@@ -61,6 +64,7 @@ public class SectorBST
 
 
 }
+//use Unity instead
 struct Vector3{
     float x, y, z;
 }
