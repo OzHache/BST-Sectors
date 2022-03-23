@@ -30,6 +30,7 @@ public class Sector
         return subSector.Contains(point);
     }
     
+    
     public int Count(){
         int count = 0;
         count += a.Count();
